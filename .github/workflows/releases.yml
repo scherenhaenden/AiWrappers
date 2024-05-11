@@ -35,12 +35,15 @@ jobs:
  
       - name: Build
         # build dotnet with output ./build.zip
-        run: dotnet build --configuration Release -o ./ #--no-restore #--output ./build.zip
+        run: dotnet build --configuration Release -o ./Release #--no-restore #--output ./build.zip
         # Runs the specified script
         #echo pwd
       - name: Run a multi-line script
         run: |
            pwd
            ls -ali
+           ls -ali ./Release
+           # zip the build
+           zip -r ./Release/build.zip ./Release
             
        
