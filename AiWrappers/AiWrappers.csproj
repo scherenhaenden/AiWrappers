@@ -4,6 +4,16 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <Version>0.0.1</Version>
+        <Copyright>Eddie Krill</Copyright>
+        <PackageProjectUrl>https://rockatuestilo.com/</PackageProjectUrl>
+        <PackageLicenseUrl>https://rockatuestilo.com/</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/scherenhaenden/AiWrappers</RepositoryUrl>
+        <RepositoryType>github</RepositoryType>
+        <PackageTags>#AI #OpenAi #Perplexity #google</PackageTags>
+        <AssemblyVersion>0.0.1</AssemblyVersion>
+        <PackageVersion>0.0.1</PackageVersion>
+        <FileVersion>0.0.1</FileVersion>
     </PropertyGroup>
 
 </Project>
