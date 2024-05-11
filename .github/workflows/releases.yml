@@ -44,6 +44,18 @@ jobs:
            ls -ali
            ls -ali ./Release
            # zip the build
-           zip -r ./Release/build.zip ./Release
+           zip -r ./release.zip ./Release
+          
+          
+       # Uploads the binaries to the release
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./release.zip
+          asset_name: build.zip
+          tag: 'build-only ${{ matrix.dotnet-version }}'
+          overwrite: true
+          body: "Build of project ${{ steps.date.outputs.date }}"
             
        
