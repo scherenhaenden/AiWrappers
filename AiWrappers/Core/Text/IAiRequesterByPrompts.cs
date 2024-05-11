@@ -1,4 +1,4 @@
-namespace AiWrapper.Core.Text;
+namespace AiWrappers.Core.Text;
 
 public interface IAiRequesterByPrompts
 {
