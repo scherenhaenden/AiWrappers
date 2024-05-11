@@ -41,6 +41,7 @@ jobs:
       - name: Run a multi-line script
         run: |
            pwd
-           ls -ali          
+           ls -ali
+          ls AiWrappers/
             
        
