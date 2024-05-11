@@ -42,8 +42,5 @@ jobs:
         run: |
            pwd
            ls -ali
-           ls AiWrappers/
-           ls AiWrappers/bin/
-           ls AiWrappers/bin/Release/
             
        
