@@ -54,7 +54,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./release.zip
           asset_name: build.zip
-          tag: 'build-only ${{ matrix.dotnet-version }}'
+          tag: 'build-only-${{ matrix.dotnet-version }}'
           overwrite: true
           body: "Build of project ${{ steps.date.outputs.date }}"
             
