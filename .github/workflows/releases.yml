@@ -35,7 +35,7 @@ jobs:
  
       - name: Build
         # build dotnet with output ./build.zip
-        run: dotnet build --configuration Release #--no-restore #--output ./build.zip
+        run: dotnet build --configuration Release -o ./ #--no-restore #--output ./build.zip
         # Runs the specified script
         #echo pwd
       - name: Run a multi-line script
