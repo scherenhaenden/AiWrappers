@@ -43,5 +43,6 @@ jobs:
            pwd
            ls -ali
            ls AiWrappers/
+           ls AiWrappers/bin/
             
        
