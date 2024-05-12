@@ -1,19 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <Version>0.0.1</Version>
+        <Version>0.0.2</Version>
         <Copyright>Eddie Krill</Copyright>
         <PackageProjectUrl>https://rockatuestilo.com/</PackageProjectUrl>
         <PackageLicenseUrl>https://rockatuestilo.com/</PackageLicenseUrl>
         <RepositoryUrl>https://github.com/scherenhaenden/AiWrappers</RepositoryUrl>
         <RepositoryType>github</RepositoryType>
         <PackageTags>#AI #OpenAi #Perplexity #google</PackageTags>
-        <AssemblyVersion>0.0.1</AssemblyVersion>
-        <PackageVersion>0.0.1</PackageVersion>
-        <FileVersion>0.0.1</FileVersion>
+        <AssemblyVersion>0.0.2</AssemblyVersion>
+        <PackageVersion>0.0.2</PackageVersion>
+        <FileVersion>0.0.2</FileVersion>
+        <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
     </PropertyGroup>
 
 </Project>
