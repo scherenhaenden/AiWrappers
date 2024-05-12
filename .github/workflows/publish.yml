@@ -23,10 +23,17 @@ jobs:
         run: dotnet pack  -o ./pack 
         # Runs the specified script
         #echo pwd
-      - name: Run a multi-line script
+      - name: Find NuGet Package
+        id: find_package
         run: |
-          dotnet nuget push "./pack/AiWrappers.0.0.1.nupkg" --api-key ${{ secrets.AIWRAPPERS }} --source https://api.nuget.org/v3/index.json
+          package_name=$(ls ./pack/*.nupkg | head -n 1)
+          echo "package_name=$package_name" >> $GITHUB_OUTPUT
 
+      - name: Publish NuGet Package
+        run: |
+          dotnet nuget push "${{ steps.find_package.outputs.package_name }}" \
+              --api-key ${{ secrets.AIWRAPPERS }} \
+              --source https://api.nuget.org/v3/index.json
 
       # - name: Setup dotnet
       #   uses: actions/setup-dotnet@v1
