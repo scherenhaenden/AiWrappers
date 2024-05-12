@@ -1,71 +1,81 @@
-**README: AiWrappers Core Library - FluentRestRequester**
+✨ AiWrappers: Your Gateway to AI Wonders ✨
+------------------------------------------
 
-The FluentRestRequester class provides a fluent and intuitive interface for making HTTP requests within your .NET applications. It simplifies the construction of complex requests, handling of various content types, and integration with RESTful APIs.
+Unleash the boundless potential of artificial intelligence with AiWrappers, your elegant toolkit for effortlessly interacting with the most cutting-edge AI APIs.
 
-**Key Features**
+### 💫 Why Choose AiWrappers?
 
-*   **Fluent Interface:** Chain methods to build requests in a readable and maintainable way.
-    
-*   **Flexible Content Handling:** Easily send JSON, XML, form data, or any other content type.
-    
-*   **Query Parameter Support:** Dynamically add query parameters to your requests.
-    
-*   **Async/Await:** Utilize async/await for non-blocking, high-performance operations.
-    
-*   **Generic Response Deserialization:** Automatically deserialize JSON responses into your models.
-    
+*   **Effortless AI Integration:** Seamlessly connect your applications to the brilliance of Google, Perplexity, OpenAI, and more.
 
-**Installation**
+*   **Fluent API Choreography:** Craft AI requests with intuitive, chainable methods that feel like composing a symphony of code.
 
-1.  Include the AiWrappers.Core.Requests namespace in your project.
-    
-2.  Install the System.Text.Json NuGet package if you're deserializing JSON responses.
-    
+*   **Abstraction Excellence:** Focus on the magic of AI, not the intricacies of API requests and responses. AiWrappers handles the heavy lifting for you.
 
-**Usage**
+*   **Extensibility Enchantment:** Customize and expand the library to effortlessly incorporate new AI providers and capabilities.
 
-C#
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   using AiWrappers.Core.Requests;  // ...  var response = await FluentRestRequester.Create()      .BaseAddress("https://api.example.com")      .Endpoint("/resource")      .WithMethod(HttpMethod.Post)      .WithPayloadModel(new { name = "John Doe", age = 30 })      .WithHeader("Authorization", "Bearer your-api-token")      .SendAsync();  // ... (Process the 'response' object)   `
+### ✨ Installation & Initiation
 
-Verwende den Code [mit Vorsicht](/faq#coding).content\_copy
+1.  Enrich your project with the AiWrappers library.
 
-**Examples**
+2.  Choose your AI adventure: Install the specific AiWrappers packages for your desired providers (e.g., AiWrappers.Perplexity).
 
-**Simple GET Request:**
+
+### 🪄 Usage Examples: A Glimpse into AI's Realm
+
+**Querying the Oracle of Perplexity:**
 
 C#
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   var response = await FluentRestRequester.Create()      .BaseAddress("https://api.example.com")      .Endpoint("/users")      .AddQueryParameter("id", "123")      .SendAsync>();   `
+```csharp
+using AiWrappers.Perplexity;
+using AiWrappers.Core.Text; // Updated import
 
-Verwende den Code [mit Vorsicht](/faq#coding).content\_copy
 
-**POST Request with JSON Payload:**
+// ...
 
+
+var answer = await PerplexityRequester.Create()
+    .WithApiKey("your-perplexity-api-key")
+    .RunRequest("What is the meaning of life?"); // Updated method call
+
+
+Conversing with the OpenAI Muse:
+```
+    
+    
 C#
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   var model = new { name = "Jane Doe", email = "jane@example.com" };  var response = await FluentRestRequester.Create()      .BaseAddress("https://api.example.com")      .Endpoint("/users")      .WithMethod(HttpMethod.Post)      .WithPayloadModel(model)      .SendAsync();   `
+```csharp
+using AiWrappers.OpenAI;
+using AiWrappers.Cordve.Text; // Updated import
 
-Verwende den Code [mit Vorsicht](/faq#coding).content\_copy
 
-**Advanced Usage**
+// ...
 
-*   **Custom Content Types:** Use WithContent and WithContentType for non-JSON data.
-    
-*   **Error Handling:** Catch exceptions (HttpRequestException, JsonException) to gracefully handle errors.
-    
-*   **Customization:** Extend FluentRestRequester to create your own specialized request builders.
-    
 
-**Important Notes**
+var completion = await OpenAIRequester.Create()
+    .WithApiKey("your-openai-api-key")
+    .WithModel("text-davinci-003") // Choose your AI model
+    .RunRequest("Once upon a time..."); // Updated method call
+```
 
-*   Ensure you have proper error handling in your application to handle network issues and API failures.
-    
-*   For production use, consider adding logging and telemetry to monitor your requests.
-    
-*   If you encounter issues with complex JSON deserialization, explore using a more robust library like Newtonsoft.Json.
-    
+🔮 The AiWrappers Arsenal
 
-**Contributing**
+*   **Core:** The foundational magic that empowers all interactions with AI providers.
 
-We welcome contributions! Please create a pull request or open an issue if you find any bugs or have suggestions for improvements.
+*   **Provider-Specific Packages:** Each package unlocks the unique capabilities of a particular AI platform (e.g., AiWrappers.Perplexity, AiWrappers.OpenAI).
+
+
+🙌 Join the AI Revolution!
+
+Whether you're a seasoned AI sorcerer or just beginning your journey, AiWrappers empowers you to weave AI into your applications with ease and grace.
+
+*   **Explore the Documentation:** Delve deeper into the mystical arts of AiWrappers through our comprehensive documentation.
+
+*   **Share Your Creations:** Showcase your AI-powered projects and inspire others on the endless possibilities.
+
+*   **Contribute Your Magic:** Help us expand the realm of AiWrappers by contributing your own code, ideas, or enchantments.
+
+Let's embark on an extraordinary AI adventure together!
+
