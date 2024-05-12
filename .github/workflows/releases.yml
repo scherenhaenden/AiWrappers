@@ -3,7 +3,8 @@ name: tests
 on:
   push:
     branches:
-       - 'test'         # matches every branch that doesn't contain a '/'      
+       - 'releases'
+       - 'update-release-workflow' # matches every branch that doesn't contain a '/'      
 jobs:
   # This workflow contains a single job called "build"
   build:
@@ -34,5 +35,27 @@ jobs:
  
       - name: Build
         # build dotnet with output ./build.zip
-        run: dotnet build --configuration Release #--no-restore #--output ./build.zip
-     
+        run: dotnet build --configuration Release -o ./Release #--no-restore #--output ./build.zip
+        # Runs the specified script
+        #echo pwd
+      - name: Run a multi-line script
+        run: |
+           pwd
+           ls -ali
+           ls -ali ./Release
+           # zip the build
+           zip -r ./release.zip ./Release
+          
+          
+       # Uploads the binaries to the release
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./release.zip
+          asset_name: build.zip
+          tag: 'build-only-${{ matrix.dotnet-version }}'
+          overwrite: true
+          body: "Build of project ${{ steps.date.outputs.date }}"
+            
+       
