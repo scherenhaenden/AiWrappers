@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiWrappers", "AiWrappers\AiWrappers.csproj", "{88D0BBE5-B2E0-40E3-86EA-2A214A0C171E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiWrappers.Tests", "AiWrappers.Tests\AiWrappers.Tests.csproj", "{8078821E-FF10-4C32-B4BE-ABF352F4973C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{88D0BBE5-B2E0-40E3-86EA-2A214A0C171E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88D0BBE5-B2E0-40E3-86EA-2A214A0C171E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88D0BBE5-B2E0-40E3-86EA-2A214A0C171E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8078821E-FF10-4C32-B4BE-ABF352F4973C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8078821E-FF10-4C32-B4BE-ABF352F4973C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8078821E-FF10-4C32-B4BE-ABF352F4973C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8078821E-FF10-4C32-B4BE-ABF352F4973C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -10,9 +10,9 @@
         <RepositoryUrl>https://github.com/scherenhaenden/AiWrappers</RepositoryUrl>
         <RepositoryType>github</RepositoryType>
         <PackageTags>#AI #OpenAi #Perplexity #google</PackageTags>
-        <AssemblyVersion>0.0.2</AssemblyVersion>
-        <PackageVersion>0.0.2</PackageVersion>
-        <FileVersion>0.0.2</FileVersion>
+        <AssemblyVersion>0.0.3</AssemblyVersion>
+        <PackageVersion>0.0.3</PackageVersion>
+        <FileVersion>0.0.3</FileVersion>
         <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
     </PropertyGroup>
 
